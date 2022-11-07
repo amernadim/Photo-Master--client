@@ -37,11 +37,7 @@ const Header = () => {
 
   return (
     <nav className="navbar h-20 bg-base-100 inline-block items-center mx-auto py-4">
-      <div className="navbar-start flex justify-between w-full">
-
-   
-
-      
+      <div className="navbar-start flex justify-between w-full">      
       <div className="dropdown lg:hidden">
           <label tabIndex={0} className="btn btn-ghost">
             <svg
@@ -62,7 +58,7 @@ const Header = () => {
 
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 flex gap-1 "
+            className="menu menu-compact dropdown-content mt-3 flex gap-2 bg-base-100 px-3 py-1"
           >
             {menuItems}
           </ul>
@@ -74,10 +70,6 @@ const Header = () => {
           <p>Photo Master</p>
         </Link>
         </div>
-
-
-        
-
 
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal">{menuItems}</ul>
