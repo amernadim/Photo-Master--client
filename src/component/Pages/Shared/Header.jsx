@@ -23,7 +23,7 @@ const Header = () => {
       </li>
 
       <li className="font-semibold">
-        <Link to="/">Blog</Link>
+        <Link to="/blog">Blog</Link>
       </li>
 
       {
@@ -31,7 +31,7 @@ const Header = () => {
         <>
 
         <li className="font-semibold">
-        <Link to="/">My Reviews</Link>
+        <Link to="/myReview">My Reviews</Link>
       </li>
 
       <li className="font-semibold">
