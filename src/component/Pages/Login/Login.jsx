@@ -3,7 +3,7 @@ import React from 'react';
 const Login = () => {
   return (
     <div className='mt-[90px]'>
-      Login
+     login
     </div>
   );
 };
