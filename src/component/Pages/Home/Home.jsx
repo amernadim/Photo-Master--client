@@ -3,6 +3,7 @@ import Banner from '../../Assets/banner.jpg'
 import Client from './Client';
 import FounderInfo from './FounderInfo';
 import Gallary from './Gallary';
+import LimitServices from './LimitServices';
 
 const Home = () => {
   return (
@@ -32,6 +33,10 @@ const Home = () => {
 
     </div>
   </div>
+
+      <div>
+        <LimitServices/>
+      </div>
     
      <div>
        <h2 className='text-4xl font-semibold mt-5 text-center'>Some photo from Photo Master</h2>
@@ -42,7 +47,7 @@ const Home = () => {
      <h2 className='text-3xl font-semibold mt-5 text-center'>Information of Photographer</h2>
         <FounderInfo/>
      </div>
-     
+
      <div>
       <Client/>
      </div>
