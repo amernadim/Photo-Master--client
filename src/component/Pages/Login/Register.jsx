@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Lottie from "lottie-react";
-// import registerAnimation from "../../Assets/register.json";
 
 const Register = () => {
   const handleRegister = (event) => {
@@ -11,19 +9,13 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(name,email,password);
+    // console.log(name,email,password);
 
   }
   return (
-    <div className="flex mt-[90px]">
-
-      {/* <div className='px-5 pt-6 pb-5 text-center border border-gray-300 rounded lg:w-2/5"'>
-        <Lottie animationData={registerAnimation} loop={true} />
-      </div> */}
-
-      <div className="flex max-w-md p-6 rounded-md sm:p-10  border-2 border-slate-600 mx-auto mb-6">
-        <form onSubmit={handleRegister} className="space-y-5 ">
-          <h1 className="my-1 text-center text-2xl font-bold">Register</h1>
+      <div className="flex max-w-md p-6 rounded-md sm:p-10  border-2 border-slate-600 mx-auto mb-6 mt-[90px]">
+        <form onSubmit={handleRegister} className="space-y-5 mx-auto">
+          <h1 className="my-1 text-center text-3xl font-bold">Sign up</h1>
           <div className="space-y-4">
             <div>
               <label htmlFor="name" className="block mb-2 text-sm">
@@ -67,20 +59,20 @@ const Register = () => {
                 type="submit"
                 className="w-full px-8 py-3 font-semibold rounded-md bg-orange-500 text-white"
               >
-                Sign in
+                Sign up
               </button>
             </div>
             <p className="px-6 text-sm text-center">
               Allready Have An Account?
               <Link to="/login" className="hover:underline ">
-                Login
+                Sign in
               </Link>
               .
             </p>
           </div>
         </form>
       </div>
-    </div>
+   
   );
 };
 

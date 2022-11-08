@@ -27,13 +27,13 @@ const Header = () => {
 
       <li className="font-semibold mr-2">
         <Link className="btn btn-warning text-white rounded-md" to="/register">
-          Register
+          Sign up
         </Link>
       </li>
 
       <li className="font-semibold mr-2">
-        <Link className="btn text-white rounded-md" to="/login">
-          <button className="">Login</button>
+        <Link className="btn btn-warning text-white rounded-md" to="/login">
+          Sign in
         </Link>
       </li>
     </>
