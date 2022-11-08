@@ -4,7 +4,7 @@ import Logo from '../../Assets/logo.png'
 import { AuthContext } from "../../Context/AuthProvider";
 
 const Header = () => {
-  const {logOut} = useContext(AuthContext)
+  const {logOut,user} = useContext(AuthContext)
 
   const handleLogOut = () => {
     logOut()
@@ -23,6 +23,14 @@ const Header = () => {
       </li>
 
       <li className="font-semibold">
+        <Link to="/">Blog</Link>
+      </li>
+
+      {
+        user?.uid ? 
+        <>
+
+        <li className="font-semibold">
         <Link to="/">My Reviews</Link>
       </li>
 
@@ -30,11 +38,19 @@ const Header = () => {
         <Link to="/addService">Add Services</Link>
       </li>
 
-      <li className="font-semibold">
-        <Link to="/">Blog</Link>
-      </li>
-
       <li className="font-semibold mr-2">
+        <Link onClick={handleLogOut} className="btn btn-warning text-white rounded-md" to="#">
+          Log Out
+        </Link>
+      </li>
+        
+        </>
+
+        :
+
+        <>
+        
+        <li className="font-semibold mr-2">
         <Link className="btn btn-warning text-white rounded-md" to="/register">
           Sign up
         </Link>
@@ -45,12 +61,21 @@ const Header = () => {
           Sign in
         </Link>
       </li>
+        
+        
+        </>
+      }
 
-      <li className="font-semibold mr-2">
-        <Link onClick={handleLogOut} className="btn btn-warning text-white rounded-md" to="#">
-          Log Out
-        </Link>
-      </li>
+     
+
+   
+
+    
+
+     
+
+
+
     </>
   );
 
