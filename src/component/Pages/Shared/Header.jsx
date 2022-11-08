@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Logo from '../../Assets/logo.png'
+import { AuthContext } from "../../Context/AuthProvider";
 
 const Header = () => {
+  const {logOut} = useContext(AuthContext)
+
+  const handleLogOut = () => {
+    logOut()
+    .then()
+    .catch(err => console.log(err))
+  }
+
   const menuItems = (
     <>
       <li className="font-semibold">
@@ -34,6 +43,12 @@ const Header = () => {
       <li className="font-semibold mr-2">
         <Link className="btn btn-warning text-white rounded-md" to="/login">
           Sign in
+        </Link>
+      </li>
+
+      <li className="font-semibold mr-2">
+        <Link onClick={handleLogOut} className="btn btn-warning text-white rounded-md" to="#">
+          Log Out
         </Link>
       </li>
     </>
