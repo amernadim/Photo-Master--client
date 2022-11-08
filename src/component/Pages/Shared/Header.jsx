@@ -28,7 +28,7 @@ const Header = () => {
       </li>
 
       <li className="font-semibold mr-2">
-        <Link className="btn text-white rounded-md btn-accent" to="/">
+        <Link className="btn text-white rounded-md" to="/">
           <button className="">Login</button>
         </Link>
       </li>
