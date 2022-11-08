@@ -35,8 +35,8 @@ const ServicesCard = ({services}) => {
 			<p className="">{description.slice(0,100)}...</p>
 		</div>
     <div>
-      <button className='btn glass'>
-        <Link className='flex gap-5 items-center text-black' to="#">Details <ChevronDoubleRightIcon  className="h-6 w-6 text-orange-500"/> </Link>
+      <button className='btn glass p-0 m-0' >
+        <Link to={`/service/${_id}`} className='flex gap-5 py-3 px-4 items-center text-black' >Details <ChevronDoubleRightIcon  className="h-6 w-6 text-orange-500"/> </Link>
       </button>
     </div>
 	</div>
