@@ -38,13 +38,13 @@ const Home = () => {
         <LimitServices/>
       </div>
     
-     <div>
-       <h2 className='text-4xl font-semibold mt-5 text-center'>Some photo from Photo Master</h2>
+     <div className='mt-14'>
+       <h2 className='text-4xl font-bold text-orange-600 mt-5 text-center'>Some photo from Photo Master</h2>
       <Gallary/>
      </div>
 
      <div>
-     <h2 className='text-3xl font-semibold mt-5 text-center'>Information of Photographer</h2>
+     <h2 className='text-4xl font-bold mt-5 text-orange-600 text-center'>Information of Photographer</h2>
         <FounderInfo/>
      </div>
 

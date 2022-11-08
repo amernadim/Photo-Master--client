@@ -13,7 +13,7 @@ const Client = () => {
   return (
     <section className="p-6 bg-white">
 	<div className="container p-4 mx-auto text-center">
-		<h2 className="text-3xl font-bold">Trusted clients who has taken Photo Master's services</h2>
+		<h3 className="text-4xl font-bold">Trusted clients who has taken Photo Master's services</h3>
 	</div>
 	<div className="container flex flex-wrap justify-center mx-auto dark:text-gray-400">
 		<div className="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4">

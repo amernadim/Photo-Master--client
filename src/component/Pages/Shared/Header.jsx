@@ -67,7 +67,7 @@ const Header = () => {
         <div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
           <img className="h-10" src={Logo} alt="" />
-          <p>Photo Master</p>
+          <p className="text-orange-600">Photo Master</p>
         </Link>
         </div>
 
