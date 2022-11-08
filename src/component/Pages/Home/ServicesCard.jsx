@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDoubleRightIcon } from '@heroicons/react/24/solid'
+import { ChevronDoubleRightIcon } from '@heroicons/react/24/solid';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const ServicesCard = ({services}) => {
   // console.log(service);
@@ -14,7 +16,13 @@ const ServicesCard = ({services}) => {
 	</div>
 	<div className="space-y-4">
 		<div className="space-y-2">
-			<img src={image} alt="" className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
+      
+      <PhotoProvider>
+      <PhotoView src={image}>
+      <img src={image} alt="" className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
+      </PhotoView>
+      </PhotoProvider>
+
 			<div className="flex justify-between text-xs">
       <div className="rating rating-xs">
         <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
