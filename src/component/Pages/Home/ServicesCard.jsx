@@ -6,7 +6,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 const ServicesCard = ({services}) => {
   // console.log(service);
-  const {_id ,service,price,rating ,image,photoshoot,description } = services;
+  const {_id ,service,price,image,photoshoot,description } = services;
   return (
     <div className="max-w-lg p-4 shadow-md dark:bg-gray-900 dark:text-gray-100">
 	<div className="flex justify-between pb-4 border-bottom">

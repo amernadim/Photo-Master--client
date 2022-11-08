@@ -7,7 +7,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 const AllServices = ({services}) => {
     const {_id ,service,price,rating ,image,photoshoot,description } = services;
     return (
-      <div className="max-w-lg p-4 shadow-md dark:bg-gray-900 dark:text-gray-100">
+      <div className="max-w-lg p-4 shadow-md dark:bg-gray-900 dark:text-gray-100">       
     <div className="flex justify-between pb-4 border-bottom">
       <div className="flex items-center">
         <p  className="mb-0 text-xl font-bold">{service}</p>

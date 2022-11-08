@@ -7,7 +7,7 @@ import LimitServices from './LimitServices';
 
 const Home = () => {
   return (
-   <div>
+   <div className='mt-[90px]'>
      <div className="relative ">
     <img
       src={Banner}

@@ -6,7 +6,7 @@ const Header = () => {
   const menuItems = (
     <>
       <li className="font-semibold">
-        <Link to="/">Home</Link>
+        <Link to="/home">Home</Link>
       </li>
 
       <li className="font-semibold">
@@ -14,7 +14,11 @@ const Header = () => {
       </li>
 
       <li className="font-semibold">
-        <Link to="/">Events</Link>
+        <Link to="/">My Reviews</Link>
+      </li>
+
+      <li className="font-semibold">
+        <Link to="/addService">Add Services</Link>
       </li>
 
       <li className="font-semibold">
@@ -36,7 +40,7 @@ const Header = () => {
   );
 
   return (
-    <nav className="navbar h-20 bg-base-100 inline-block items-center mx-auto py-4">
+    <nav className="navbar h-20 bg-base-100 inline-block items-center mx-auto py-4 fixed top-0 w-full z-10">
       <div className="navbar-start flex justify-between w-full">      
       <div className="dropdown lg:hidden">
           <label tabIndex={0} className="btn btn-ghost">
