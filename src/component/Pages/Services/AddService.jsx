@@ -1,4 +1,5 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 
 const AddService = () => {
 
@@ -12,8 +13,32 @@ const AddService = () => {
 		const description = form.description.value;
 		const photoshoot = form.photoshoot.value;
 
-		console.log(service,price,image,description,photoshoot);
+		// console.log(service,price,image,description,photoshoot);
 
+		const services = {
+			service,
+			price,
+			image,
+			description,
+			photoshoot
+		}
+	  
+		fetch('http://localhost:5000/allServices' , {
+			method : "POST",
+			headers : {
+				'content-type' : 'application/json'
+			},
+			body : JSON.stringify(services)
+		})
+		.then(res => res.json())
+		.then(data => {
+			console.log(data)
+			if(data.acknowledged) {
+				form.reset()
+				toast.success('Service Successfully Added')
+			}
+		})
+		.catch(err => console.error(err))
 
 	}
 
