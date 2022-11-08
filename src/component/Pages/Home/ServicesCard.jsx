@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDoubleRightIcon } from '@heroicons/react/24/solid'
 
 const ServicesCard = ({services}) => {
   // console.log(service);
@@ -32,6 +34,11 @@ const ServicesCard = ({services}) => {
 		<div className="space-y-2">
 			<p className="">{description.slice(0,100)}...</p>
 		</div>
+    <div>
+      <button className='btn glass'>
+        <Link className='flex gap-5 items-center text-black' to="#">Details <ChevronDoubleRightIcon  className="h-6 w-6 text-orange-500"/> </Link>
+      </button>
+    </div>
 	</div>
 </div>
   );

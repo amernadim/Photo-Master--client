@@ -24,8 +24,8 @@ const LimitServices = () => {
       }
       </div>  
       <div className='text-center'>
-      <button className='btn px-3 py-2' ><Link to="/">See All</Link></button>
-        </div>   
+      <button className='btn px-3 py-2' ><Link to="/services">See All</Link></button>
+      </div>   
     </div>
   );
 };

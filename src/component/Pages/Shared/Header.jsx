@@ -10,7 +10,7 @@ const Header = () => {
       </li>
 
       <li className="font-semibold">
-        <Link to="/">Donation</Link>
+        <Link to="/services">Services</Link>
       </li>
 
       <li className="font-semibold">
@@ -67,7 +67,7 @@ const Header = () => {
         <div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
           <img className="h-10" src={Logo} alt="" />
-          <p className="text-orange-600">Photo Master</p>
+          <p className="text-orange-600 font-bold">Photo Master</p>
         </Link>
         </div>
 
