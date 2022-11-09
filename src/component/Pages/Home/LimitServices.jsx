@@ -13,8 +13,8 @@ const LimitServices = () => {
 
   return (
     <div className='my-10'>
+      	{/* 3 Services Section */}
       <p className="text-4xl font-bold text-orange-600 text-center">Services</p>
-
       <div className='grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto my-10'>
       {
         limitService.map(services => <ServicesCard 

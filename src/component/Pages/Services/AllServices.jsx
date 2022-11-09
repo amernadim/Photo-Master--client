@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { ChevronDoubleRightIcon } from '@heroicons/react/24/solid';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
-import { AuthContext } from '../../Context/AuthProvider';
-import Spinner from '../Spinner/Spinner';
 
 const AllServices = ({services}) => {
     const {_id ,service,price,rating ,image,photoshoot,description } = services;

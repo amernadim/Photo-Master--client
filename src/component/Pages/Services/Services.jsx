@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react';
-// import { useLoaderData } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner';
 import AllServices from './AllServices';
 
 const Services = () => {
-  // const allServices = useLoaderData();
-  // console.log(allServices);
-  
   const [servicesInfo,setServicesInfo] = useState([]);
   const [loading,setLoading] = useState(true);
 

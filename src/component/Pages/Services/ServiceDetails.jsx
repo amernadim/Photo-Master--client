@@ -9,8 +9,8 @@ const ServiceDetails = () => {
   const serviceInfo = useLoaderData();
   // get data state
   const [datas,setDatas] = useState([]);
-  // console.log(datas);
-  const { _id, service, price, rating, image, photoshoot, description } =
+  
+  const { _id, service, price, image, photoshoot, description } =
   serviceInfo;
 
   const handleReview = event => {
@@ -26,9 +26,7 @@ const ServiceDetails = () => {
       reviewerPhoto : user?.photoURL,
       reviewText : review,
     }
-
-    // console.log(reviewInfo);
-
+  
     // post data
     fetch('http://localhost:5000/allreviews', {
       method : "POST",

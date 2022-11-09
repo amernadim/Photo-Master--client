@@ -12,6 +12,7 @@ import Client8 from "../../Assets/Clients/client-8.jpg";
 const Client = () => {
   return (
     <section className="p-6 bg-white">
+			{/* Client Section */}
 	<div className="container p-4 mx-auto text-center">
 		<h3 className="text-4xl font-bold">Trusted clients who has taken Photo Master's services</h3>
 	</div>

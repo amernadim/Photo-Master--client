@@ -4,6 +4,7 @@ import FounderImg from '../../Assets/Founder.jpg'
 const FounderInfo = () => {
   return (
     <div className="max-w-md p-8 sm:flex sm:space-x-6 mx-auto ">
+      	{/* Founder info Section */}
     <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
       <img src={FounderImg} alt="" className="object-cover object-center w-full h-full rounded " />
     </div>

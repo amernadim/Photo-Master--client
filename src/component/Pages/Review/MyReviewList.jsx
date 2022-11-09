@@ -9,7 +9,6 @@ const MyReviewList = ({info,datas,setDatas}) => {
   const {reviewText,reviewerEmail,reviewerName,reviewerPhoto,serviceId,serviceName} = review;
 
   const handleDelete = (info) => {
-    //  console.log(info)
     const agree = window.confirm(`Are you sure you want to delete`);
 
     if (agree) {
@@ -34,7 +33,7 @@ const MyReviewList = ({info,datas,setDatas}) => {
 			</div>
 			<div className="flex-1 block px-2 py-3 truncate sm:p-3 sm:w-auto">{reviewText}</div>
       <div className="w-24 px-2 py-3 text-center sm:p-3 flex gap-3">
-      <Link to="">
+      <Link to={`/updateReview/${_id}`}>
           <PencilSquareIcon className="h-6 w-6 text-blue-500"/>
         </Link>
         <TrashIcon

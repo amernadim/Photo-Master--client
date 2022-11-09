@@ -11,32 +11,33 @@ const AuthProvider = ({children}) => {
   const [loading,setLoading] = useState(true)
 
   const googleProvider = new GoogleAuthProvider()
-
+  // user create
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   }
-
+  // login by email and password
   const login = (email,password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password)
   }
-
+  // logout
   const logOut = () => {
     setLoading(true);
     localStorage.removeItem("photoMaster-token");
     return signOut(auth)
   }
-
+  // Login by Google
   const googleSingIn = () => { 
     setLoading(true);
     return signInWithPopup(auth, googleProvider)
   }
+ // update name and photo url
   const updateUserProfile = profile => {
     setLoading(true);
     return updateProfile(auth.currentUser,profile)
   }
-
+ //onAuth Satate change 
   useEffect( () =>{
    const unsubscribe = onAuthStateChanged(auth, currentUser =>{
       console.log(currentUser);
@@ -48,6 +49,7 @@ const AuthProvider = ({children}) => {
   }
 }, [])
 
+ // Auth inro
   const authInfo = {
     user, 
     createUser ,

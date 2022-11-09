@@ -10,6 +10,7 @@ const ServicesCard = ({services}) => {
   return (
     <div className="max-w-lg p-4 shadow-md dark:bg-gray-900 dark:text-gray-100">
 	<div className="flex justify-between pb-4 border-bottom">
+    	{/* Service Card Section */}
 		<div className="flex items-center">
 			<p  className="mb-0 text-xl font-bold">{service}</p>
 		</div>
