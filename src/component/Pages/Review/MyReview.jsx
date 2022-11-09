@@ -11,7 +11,11 @@ const MyReview = () => {
   const {user} = useContext(AuthContext)
   const email = user?.email;
   useEffect(() => {
-    fetch(`http://localhost:5000/reviewes/${email}`)
+    fetch(`http://localhost:5000/reviewes/${email}`, {
+      headers : {
+        authorization : `Bearer ${localStorage.getItem('photoMaster-token')}`
+      }
+    })
     .then(res => res.json())
     .then(data => setDatas(data))
     .catch(err => console.log(err))
@@ -26,7 +30,7 @@ const MyReview = () => {
 
 	<div className="flex flex-col text-xs">
 		<div className="flex text-left bg-gray-700">		
-			<div className="w-32 px-2 py-3 sm:p-3">Service</div>
+			<div className="w-32 px-2 py-3 sm:p-3">Service Name</div>
 			<div className="flex-1 px-2 py-3 sm:p-3">My Review</div>
 			<div className="w-24 pl-4 py-3 text-right sm:p-3 ">Action</div>
 		</div>

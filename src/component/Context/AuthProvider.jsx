@@ -24,6 +24,7 @@ const AuthProvider = ({children}) => {
 
   const logOut = () => {
     setLoading(true);
+    localStorage.removeItem("photoMaster-token");
     return signOut(auth)
   }
 

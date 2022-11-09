@@ -2,6 +2,7 @@ import React from 'react';
 import { TrashIcon, PencilSquareIcon } from "@heroicons/react/24/solid";
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import Swal from 'sweetalert2'
 
 const MyReviewList = ({info,datas,setDatas}) => {
   const {review,_id,myDate} = info;

@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 
 
 const Login = () => {
-  const {login,googleSingIn} = useContext(AuthContext);
+  const {user,login,googleSingIn} = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -23,10 +23,30 @@ const Login = () => {
       // console.log(email,password);
       login(email,password)
       .then(result => {
-        const user = result.user;
-        toast.success('Login Succesfully');
-        form.reset()      
-        navigate(from, { replace: true });
+        const user = result.user;     
+
+        const currentUser = {
+          email: user.email,
+        };
+
+         // get jwt token
+         fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            // local storage
+            localStorage.setItem("photoMaster-token", data.token);
+            navigate(from, { replace: true });
+          });
+
+          toast.success('Login Succesfully');
+         form.reset() 
        
         console.log(user);
       })
@@ -40,8 +60,27 @@ const Login = () => {
      googleSingIn()
      .then(result => {
       const user = result.user;
+
+      const currentUser = {
+        email: user.email,
+      };
+       // get jwt token
+       fetch("http://localhost:5000/jwt", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(currentUser),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          // local storage
+          localStorage.setItem("photoMaster-token", data.token);
+          navigate(from, { replace: true });
+        });
+
       toast.success('Login Succesfully');
-      navigate(from, { replace: true });
       console.log(user);
     })
     .catch(err => {

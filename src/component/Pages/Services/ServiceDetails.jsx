@@ -46,7 +46,6 @@ const ServiceDetails = () => {
 			}
 		})
 		.catch(err => console.error(err))
-
   }
 
   // get data
