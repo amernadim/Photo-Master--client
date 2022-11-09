@@ -51,6 +51,7 @@ const Login = () => {
 
   return (
     <div className="hero min-h-screen mt-[90px]">
+      <title>Login - Photo Master</title>
     <div className="hero-content flex-col lg:flex-row-reverse">
       <div className="text-center lg:text-left">
 

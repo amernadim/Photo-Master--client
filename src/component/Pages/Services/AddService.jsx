@@ -44,6 +44,7 @@ const AddService = () => {
 
   return (
     <section className="p-6 mt-[90px] mx-auto w-11/12">
+			<title>Add Services - Photo Master</title>
 	  <form onSubmit={handleSubmit} className="container flex flex-col mx-auto space-y-12">
 
 			<div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">

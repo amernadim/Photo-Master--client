@@ -41,6 +41,7 @@ const Register = () => {
   }
   return (
       <div className="flex max-w-md p-6 rounded-md sm:p-10  border-2 border-slate-600 mx-auto mb-6 mt-[90px]">
+        <title>Register - Photo Master</title>
         <form onSubmit={handleRegister} className="space-y-5 mx-auto">
           <h1 className="my-1 text-center text-3xl font-bold">Sign up</h1>
           <div className="space-y-4">

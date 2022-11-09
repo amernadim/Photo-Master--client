@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Blog = () => {
   return (
     <div className="bg-gray-800 text-gray-100 mt-[90px] py-20">
+      <title>Blog - Photo Master</title>
       {/* Ques 1 */}
     <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-gray-900">
       <div className="flex items-center justify-between">

@@ -63,13 +63,10 @@ const ServiceDetails = () => {
     .catch(err => console.log(err))
   },[])
 
-
-
-
-
   return (
     <>
-     <section className="mt-[90px] my-3 service-section">
+     <section className="mt-[90px] my-3 service-section w-10/12 mx-auto">
+     <title>Services Details - Photo Master</title>
       <div className="container flex gap-5 flex-col mx-auto lg:flex-row">
         <div className="w-full lg:w-1/3">
           <img src={image} alt="" />
