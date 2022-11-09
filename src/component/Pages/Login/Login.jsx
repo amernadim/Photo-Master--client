@@ -5,7 +5,7 @@ import LoginAnimation from "../../Assets/login.json";
 import { AuthContext } from "../../Context/AuthProvider";
 import { Result } from "postcss";
 import toast from "react-hot-toast";
-import Spinner from "../Spinner/Spinner";
+
 
 const Login = () => {
   const {login,googleSingIn} = useContext(AuthContext);
@@ -50,9 +50,7 @@ const Login = () => {
     }) 
    }
 
-   if(loading) {
-    return <Spinner/>
-  }
+  
 
 
   return (

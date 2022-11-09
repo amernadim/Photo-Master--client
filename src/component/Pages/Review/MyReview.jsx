@@ -5,6 +5,9 @@ import MyReviewList from './MyReviewList';
 
 const MyReview = () => {
   const [datas,setDatas] = useState([])
+  // map
+  // const [display,setDisplay] = useState(datas);
+
   const {user} = useContext(AuthContext)
   const email = user?.email;
   useEffect(() => {
@@ -32,6 +35,8 @@ const MyReview = () => {
       datas.map(info => <MyReviewList
       key={info._id}
       info={info}
+      datas={datas}
+      setDatas={setDatas}
       ></MyReviewList>)
     }
 

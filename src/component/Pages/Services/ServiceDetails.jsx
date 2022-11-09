@@ -7,15 +7,11 @@ import ReviewCard from "../Review/ReviewCard";
 const ServiceDetails = () => {
   const {user} = useContext(AuthContext);
   const serviceInfo = useLoaderData();
-
   // get data state
   const [datas,setDatas] = useState([]);
   // console.log(datas);
- 
   const { _id, service, price, rating, image, photoshoot, description } =
   serviceInfo;
-  
-  // console.log(_id,user?.email,user?.displayName,user?.photoURL);
 
   const handleReview = event => {
     event.preventDefault()
@@ -55,8 +51,6 @@ const ServiceDetails = () => {
 
   // get data
   useEffect(() => {
-    // fetch("http://localhost:5000/allreviews")
-
     fetch(`http://localhost:5000/reviews/${_id}`)
     .then(res => res.json())
     .then(data => setDatas(data))

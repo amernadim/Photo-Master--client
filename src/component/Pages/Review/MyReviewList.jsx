@@ -1,10 +1,31 @@
 import React from 'react';
 import { TrashIcon, PencilSquareIcon } from "@heroicons/react/24/solid";
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
-const MyReviewList = ({info}) => {
+const MyReviewList = ({info,datas,setDatas}) => {
   const {review,_id,myDate} = info;
-  const {reviewText,reviewerEmail,reviewerName,reviewerPhoto,serviceId,serviceName} = review
+  const {reviewText,reviewerEmail,reviewerName,reviewerPhoto,serviceId,serviceName} = review;
+
+  const handleDelete = (info) => {
+    //  console.log(info)
+    const agree = window.confirm(`Are you sure you want to delete`);
+
+    if (agree) {
+      fetch(`http://localhost:5000/reviews/${_id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount) {
+            toast.success("Deleted Success");
+            const remaing = datas.filter(d => d._id !== info._id )
+            setDatas(remaing);
+          }
+        });
+    }
+  };
   return (
      <div className="flex border-b border-opacity-20 border-gray-700 bg-gray-900">
 			<div className="w-32 px-2 py-3 sm:p-3">
@@ -16,6 +37,7 @@ const MyReviewList = ({info}) => {
           <PencilSquareIcon className="h-6 w-6 text-blue-500"/>
         </Link>
         <TrashIcon
+         onClick={() => handleDelete(info)}
           className="h-6 w-6 text-red-500"
         />
       </div>
