@@ -2,15 +2,17 @@
 
 ### in this project i use
 
+- React js
+
 - Node js
 
 - Express js
 
 - MongoDB
 
-- Tailwindcss
-
 - firebase
+
+- Tailwindcss
 
 - react-router-dom
 

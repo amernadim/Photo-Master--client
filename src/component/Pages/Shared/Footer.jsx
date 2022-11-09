@@ -6,13 +6,13 @@ const Footer = () => {
     <footer className="footer grid grid-cols-2 md:grid-cols-3 md:grid-flow-row p-10 bg-neutral text-neutral-content">
   <div>
     <span className="footer-title">Services</span> 
-    <Link className="link link-hover">Branding</Link> 
-    <Link className="link link-hover">Design</Link> 
-    <Link className="link link-hover">Marketing</Link> 
-    <Link className="link link-hover">Advertisement</Link>
+    <Link className="link link-hover">Head Shot</Link> 
+    <Link className="link link-hover">New Born</Link> 
+    <Link className="link link-hover">Family Photo Shot</Link> 
+    <Link className="link link-hover">Wedding Shot</Link>
   </div> 
   <div>
-    <span className="footer-title">Company</span> 
+    <span className="footer-title">Photo Master</span> 
     <Link className="link link-hover">About us</Link> 
     <Link className="link link-hover">Contact</Link> 
     <Link className="link link-hover">Jobs</Link> 

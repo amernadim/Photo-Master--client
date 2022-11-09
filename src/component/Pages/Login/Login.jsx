@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
 import LoginAnimation from "../../Assets/login.json";
 import { AuthContext } from "../../Context/AuthProvider";
 import { Result } from "postcss";
 import toast from "react-hot-toast";
+import Spinner from "../Spinner/Spinner";
 
 const Login = () => {
   const {login,googleSingIn} = useContext(AuthContext);
@@ -24,8 +25,9 @@ const Login = () => {
       .then(result => {
         const user = result.user;
         toast.success('Login Succesfully');
-        form.reset()
+        form.reset()      
         navigate(from, { replace: true });
+       
         console.log(user);
       })
       .catch(err => {
@@ -47,6 +49,10 @@ const Login = () => {
       console.log(err);
     }) 
    }
+
+   if(loading) {
+    return <Spinner/>
+  }
 
 
   return (
