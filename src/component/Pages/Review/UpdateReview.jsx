@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import toast from "react-hot-toast";
-import { useLoaderData } from "react-router-dom";
+import { Navigate, useLoaderData, useNavigate } from "react-router-dom";
 
 const UpdateReview = () => {
   const updatingReview = useLoaderData();
+  const navigate = useNavigate()
 
   const { review, _id, myDate } = updatingReview;
   const {
@@ -40,6 +41,7 @@ const UpdateReview = () => {
         if (data.modifiedCount > 0) {
           form.reset();
           toast.success("Successfully added!");
+          navigate('/myReview')
         }
       });
   };
@@ -57,6 +59,7 @@ const UpdateReview = () => {
               name="review"
               rows="3"
               className="w-full p-3 rounded"
+              defaultValue={reviewText}
             ></textarea>
           </div>
           <button
